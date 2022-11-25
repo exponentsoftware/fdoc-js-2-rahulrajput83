@@ -99,3 +99,15 @@ const checkUser = (users, name) => {
 }
 
 console.log(checkUser(users, 'Rahul Rajput'))
+
+const addUserSkills = (users, name, skill) => {
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].name === name) {
+            users[i].skills.push(skill);
+            return users
+        }
+    }
+    return 'User not exits'
+}
+
+console.log(addUserSkills(users, 'Alex', 'TailwindCSS'))
