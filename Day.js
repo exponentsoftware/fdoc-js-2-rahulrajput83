@@ -111,3 +111,15 @@ const addUserSkills = (users, name, skill) => {
 }
 
 console.log(addUserSkills(users, 'Alex', 'TailwindCSS'))
+
+const editUser = (users, name, newName) => {
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].name === name) {
+            users[i].name = newName
+            return users
+        }
+    }
+    return 'User not exits'
+}
+
+console.log(editUser(users, 'Alex', 'Rahul'))
